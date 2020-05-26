@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Technical Documentation Page</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1>Java Documentation</h1>
+      </header><hr>
+      <a href="#Introduction" class="nav-link">Introduction</a><hr>
+      <a href="#Hello_World" class="nav-link">Hello World</a><hr>
+      <a href="#Variables_in_Java" class="nav-link">Variables in Java</a><hr>
+      <a href="#Data_Types" class="nav-link">Data Types</a><hr>
+      <a href="#Operators_in_Java" class="nav-link">Operators in Java</a><hr>
+      <a href="#Java_If_else" class="nav-link">Java If else</a><hr>
+      <a href="#Loops_in_Java" class="nav-link">Loops in Java</a><hr>
+      <a href="#Objects_and_Classes" class="nav-link">Objects and Classes</a><hr>
+      <a href="#Constructors_in_Java" class="nav-link">Constructors in Java</a><hr>
+      <a href="#Inheritance_in_Java" class="nav-link">Inheritance in Java</a><hr>
+      <a href="#Resources_and_More" class="nav-link">Resources and More</a>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>
+          <h1>Introduction</h1>
+          <!-- <h2>About Java</h2> -->
+        </header>
+
+        <h3>About the Java Technology</h3>
+        <p>Java technology is both a programming language and a platform.</p>
+
+        <h4>The Java Programming Language</h4>
+        <p>
+          The Java programming language is a high-level language that can be characterized by all of the following buzzwords:
+          <ul>
+            <li>Simple
+            <li>Object oriented</li>
+            <li>Distributed</li>
+            <li>Multithreaded</li>
+            <li>Dynamic</li>
+            <li>Architecture neutral</li>
+            <li>Portable</li>
+            <li>High performance</li>
+            <li>Robust</li>
+            <li>Secure</li>
+          </ul>
+          <p>In the Java programming language, all source code is first written in plain text files ending with the .java extension.
+          Those source files are then compiled into .class files by the javac compiler.
+          A .class file does not contain code that is native to your processor; it instead contains bytecodes —
+          the machine language of the Java Virtual Machine1 (Java VM).
+          The java launcher tool then runs your application with an instance of the Java Virtual Machine.</p>
+
+          <p>Because the Java VM is available on many different operating systems, the same .class files are capable of running on
+          Microsoft Windows, the Solaris™ Operating System (Solaris OS), Linux, or Mac OS. Some virtual machines,
+          such as the Java SE HotSpot at a Glance, perform additional steps at runtime to give your application a performance boost.
+          This includes various tasks such as finding performance bottlenecks and recompiling (to native code) frequently used sections of code.
+          </p>
+        </p>
+
+        <h4>The Java Platform</h4>
+        <p>
+          A platform is the hardware or software environment in which a program runs. We've already mentioned some of the most popular
+          platforms like Microsoft Windows, Linux, Solaris OS, and Mac OS. Most platforms can be described as a combination of the
+          operating system and underlying hardware. The Java platform differs from most other platforms in that it's a
+          software-only platform that runs on top of other hardware-based platforms.
+          <br><br>
+          The Java platform has two components:
+          <ul>
+            <li>The Java Virtual Machine</li>
+            <li>The Java Application Programming Interface (API)</li>
+          </ul>
+          <p>You've already been introduced to the Java Virtual Machine; it's the base for
+          the Java platform and is ported onto various hardware-based platforms.</p>
+          <p>The API is a large collection of ready-made software components that provide many useful capabilities.
+          It is grouped into libraries of related classes and interfaces; these libraries are known as packages.
+          The next section, What Can Java Technology Do? highlights some of the functionality provided by the API.</p>
+          <p>As a platform-independent environment, the Java platform can be a bit slower than native code.
+          However, advances in compiler and virtual machine technologies are bringing performance close to that of
+          native code without threatening portability.</p>
+        </p>
+      </section>
+      <hr>
+
+      <section class="main-section" id="Hello_World">
+        <header>
+          <h1>Hello World</h1>
+        </header>
+        <p>
+          The process of Java programming can be simplified in three steps:
+          <ul>
+            <li>Create the program by typing it into a text editor and saving it to a file – HelloWorld.java.</li>
+            <li>Compile it by typing “javac HelloWorld.java” in the terminal window.</li>
+            <li>Execute (or run) it by typing “java HelloWorld” in the terminal window.</li>
+          </ul>
+        </p>
+        <code id="code">
+          class HelloWorld<br>
+          {<br>&nbsp;
+            public static void main(String args[])<br>&nbsp;
+            {<br>&nbsp;&nbsp;&nbsp;
+              System.out.println("Hello, World");<br>&nbsp;
+            }<br>
+          }
+        </code>
+      </section>
+      <hr>
+
+      <section class="main-section" id="Variables_in_Java">
+        <header>
+          <h1>Variables in Java</h1>
+        </header>
+        <p>
+          A variable is a name given to a memory location. It is the basic unit of storage in a program.
+          <ul>
+            <li>The value stored in a variable can be changed during program execution.</li>
+            <li>A variable is only a name given to a memory location, all the operations done on the variable effects that memory location.</li>
+            <li>In Java, all the variables must be declared before use.</li>
+          </ul>
+        </p>
+        <h3>Declaring Variables</h3>
+        <code>int data = 20;</code>
+        <p>
+          <ul>
+            <li>Int is datatype.datatype: Type of data that can be stored in this variable.</li>
+            <li>Data is variable_name.variable_name: Name given to the variable.</li>
+            <li>20 is value.value: It is the initial value stored in the variable.</li>
+          </ul>
+        </p>
+      </section>
+      <hr>
+
+      <section class="main-section" id="Data_Types">
+        <header>
+          <h1>Data Types</h1>
+        </header>
+        <p>
+          Data types specify the different sizes and values that can be stored in the variable. There are two types of data types in Java:
+          <ul>
+            <li>Primitive data types: The primitive data types include boolean, char, byte, short, int, long, float and double.</li>
+            <li>Non-primitive data types: The non-primitive data types include Classes, Interfaces, and Arrays.</li>
+          </ul>
+        </p>
+        <h3>Java Primitive Data Types</h3>
+        <p>
+          In Java language, primitive data types are the building blocks of data manipulation.
+          These are the most basic data types available in Java language.
+          <ul>
+            <li>boolean data type</li>
+            <li>byte data type</li>
+            <li>char data type</li>
+            <li>short data type</li>
+            <li>int data type</li>
+            <li>long data type</li>
+            <li>float data type</li>
+            <li>double data type</li>
+          </ul>
+        </p>
+      </section>
+      <hr>
+
+      <section class="main-section" id="Operators_in_Java">
+        <header>
+          <h1>Operators in Java</h1>
+        </header>
+        <p>
+          Operator in Java is a symbol which is used to perform operations. For example: +, -, *, / etc.<br>
+          There are many types of operators in Java which are given below:
+          <ul>
+            <li>Unary Operator</li>
+            <li>Arithmetic Operator</li>
+            <li>Shift Operator</li>
+            <li>Relational Operator</li>
+            <li>Bitwise Operator</li>
+            <li>Bitwise Operator</li>
+            <li>Ternary Operator</li>
+            <li>Assignment Operator</li>
+          </ul>
+        </p>
+      </section>
+      <hr>
+
+      <section class="main-section" id="Java_If_else">
+        <header>
+          <h1>Java If else</h1>
+        </header>
+        <p>
+          The Java if statement is used to test the condition.
+          It checks boolean condition: true or false. There are various types of if statement in Java.
+          <ul>
+            <li>if statement</li>
+            <li>if-else statement</li>
+            <li>if-else-if ladder</li>
+            <li>nested if statement</li>
+          </ul>
+        </p>
+        <h3>Java if Statement</h3>
+        <p>
+          The Java if statement tests the condition. It executes the if block if condition is true.
+        </p>
+        <code>
+          if(condition){
+            //code to be executed
+          }
+        </code>
+        <h3>Java if-else Statement</h3>
+        <p>
+          The Java if-else statement also tests the condition. It executes the if block if condition is true otherwise else block is executed.
+        </p>
+        <code>
+          if(condition){
+          //code if condition is true
+          }else{
+          //code if condition is false
+          }
+        </code>
+        <h3>Java if-else-if ladder Statement</h3>
+        <p>
+          The if-else-if ladder statement executes one condition from multiple statements.
+        </p>
+        <code>
+          if(condition1){
+          //code to be executed if condition1 is true
+          }else if(condition2){
+          //code to be executed if condition2 is true
+          }
+          else if(condition3){
+          //code to be executed if condition3 is true
+          }
+          ...
+          else{
+          //code to be executed if all the conditions are false
+          }
+        </code>
+        <h3>Java Nested if statement</h3>
+        <p>
+          The nested if statement represents the if block within another if block.
+          Here, the inner if block condition executes only when outer if block condition is true.
+        </p>
+        <code>
+          if(condition){
+            //code to be executed
+              if(condition){
+                //code to be executed
+              }
+          }
+        </code>
+      </section>
+      <hr>
+
+      <section class="main-section" id="Loops_in_Java">
+        <header>
+          <h1>Loops in Java</h1>
+        </header>
+        <p>
+          In programming languages, loops are used to execute a set of instructions/functions repeatedly when
+          some conditions become true. There are three types of loops in Java.
+          <ul>
+            <li>For Loop</li>
+            <li>While Loop</li>
+            <li>Do-while Loop</li>
+          </ul>
+        </p>
+
+        <h3>Java For Loop</h3>
+        <p>
+          The Java for loop is used to iterate a part of the program several times. If the number of
+          iteration is fixed, it is recommended to use for loop.<br>
+          There are three types of for loops in java.
+          <ul>
+            <li>Simple For Loop</li>
+            <li>For-each or Enhanced For Loop</li>
+            <li>Labeled For Loop</li>
+          </ul>
+        </p>
+        <h4>Simple For Loop declaration</h4>
+        <code>
+          for(initialization;condition;incr/decr){
+          //statement or code to be executed
+          }
+        </code>
+
+        <h3>Java While Loop</h3>
+        <p>
+          The Java while loop is used to iterate a part of the program several times.
+          If the number of iteration is not fixed, it is recommended to use while loop.
+        </p>
+        <h4>Simple While Loop declaration</h4>
+        <code>
+          initialization
+          while(condition){
+          //code to be executed
+          incr/decr
+          }
+        </code>
+
+        <h3>Java do-while Loop</h3>
+        <p>
+          The Java do-while loop is used to iterate a part of the program several times.
+          If the number of iteration is not fixed and you must have to execute the loop at least once, it is recommended to use do-while loop.
+          The Java do-while loop is executed at least once because condition is checked after loop body.
+        </p>
+        <h4>Simple While Loop declaration</h4>
+        <code>
+          initialization
+          do{
+          //code to be executed
+          incr/decr
+          }while(condition);
+        </code>
+      </section>
+      <hr>
+
+      <section class="main-section" id="Objects_and_Classes">
+        <header>
+          <h1>Objects and Classes</h1>
+          <!-- <p>In object-oriented programming technique, we design a program using objects and classes.
+            An object in Java is the physical as well as a logical entity, whereas, a class in Java is a logical entity only.</p> -->
+        </header>
+        <h2>Objects</h2>
+        <p>
+          An entity that has state and behavior is known as an object e.g., chair, bike, marker, pen, table, car, etc.
+          It can be physical or logical (tangible and intangible). The example of an intangible object is the banking system.<br>
+          An object has three characteristics:
+          <ul>
+            <li>State</li>
+            <li>Behavior</li>
+            <li>Identity</li>
+          </ul>
+        </p>
+
+        <h2>Classes</h2>
+        <p>
+          A class is a group of objects which have common properties. It is a template or blueprint from which
+          objects are created. It is a logical entity. It can't be physical.<br>
+          A class in Java can contain:
+          <ul>
+            <li>Fields</li>
+            <li>Methods</li>
+            <li>Constructors</li>
+            <li>Blocks</li>
+            <li>Nested class and interface</li>
+          </ul>
+        </p>
+
+        <h4>Class Delaration</h4>
+        <code>
+          class <class_name>{
+              field;
+              method;
+          }
+        </code>
+
+        <h4>Object and Class Example</h4>
+        <p>
+          In this example, we have created a Student class which has two data members id and name.
+          We are creating the object of the Student class by new keyword and printing the object's value.<br>
+          Here, we are creating a main() method inside the class.
+        </p>
+        <code>
+          //Java Program to illustrate how to define a class and fields<br>
+          //Defining a Student class.<br>
+          class Student{<br>
+           //defining fields<br>
+           int id;//field or data member or instance variable<br>
+           String name;<br>
+           //creating main method inside the Student class<br>
+           public static void main(String args[]){<br>
+            //Creating an object or instance<br>
+            Student s1=new Student();//creating an object of Student<br>
+            //Printing values of the object<br>
+            System.out.println(s1.id);//accessing member through reference variable<br>
+            System.out.println(s1.name);<br>
+           }<br>
+          }
+        </code>
+      </section>
+      <hr>
+
+      <section class="main-section" id="Constructors_in_Java">
+        <header>
+          <h1>Constructors in Java</h1>
+        </header>
+        <p>
+          In Java, a constructor is a block of codes similar to the method. It is called when an instance of the class is created.
+          At the time of calling constructor, memory for the object is allocated in the memory.<br><br>
+          It is a special type of method which is used to initialize the object.<br><br>
+          Every time an object is created using the new() keyword, at least one constructor is called.<br><br>
+          It calls a default constructor if there is no constructor available in the class.
+          In such case, Java compiler provides a default constructor by default.<br><br>
+          There are two types of constructors in Java: no-arg constructor, and parameterized constructor.
+        </p>
+
+        <h3>Java Default Constructor</h3>
+        <p>A constructor is called "Default Constructor" when it doesn't have any parameter.</p>
+        <code>
+          class class_name{<br>
+            class_name(){<br>
+              //code to be executed<br>
+            }<br>
+            public static void main(String args[]){<br>
+              //calling a default constructor<br>
+              class_name object_name=new class_name();<br>
+            }<br>
+          }
+        </code>
+
+        <h3>Java Parameterized Constructor</h3>
+        <p>A constructor which has a specific number of parameters is called a parameterized constructor.</p>
+        <code>
+          class class_name{<br>
+            class_name(datatype value1, datatype value2){<br>
+              //code to be executed<br>
+            }<br>
+            public static void main(String args[]){<br>
+              //calling a default constructor<br>
+              class_name object_name=new class_name(value1, value2);<br>
+            }<br>
+          }
+        </code>
+      </section>
+      <hr>
+
+      <section class="main-section" id="Inheritance_in_Java">
+        <header>
+          <h1>Inheritance in Java</h1>
+        </header>
+        <p>
+          Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a parent
+          object. It is an important part of OOPs (Object Oriented programming system).<br><br>
+          The idea behind inheritance in Java is that you can create new classes that are built upon existing classes.
+          When you inherit from an existing class, you can reuse methods and fields of the parent class.
+          Moreover, you can add new methods and fields in your current class also.<br><br>
+          Inheritance represents the IS-A relationship which is also known as a parent-child relationship.
+        </p>
+        <h4>Why use inheritance in java</h4>
+        <ul>
+          <li>For Method Overriding</li>
+          <li>For Code Reusability</li>
+        </ul>
+
+        <h4>Syntax for Java Inheritance</h4>
+        <code>
+          class Subclass-name extends Superclass-name
+          {
+             //methods and fields
+          }
+        </code>
+
+        <h4>Types of inheritance in java</h4>
+        <ul>
+          <li>Single</li>
+          <li>Multilevel</li>
+          <li>Hierarchical</li>
+          <li>Multiple</li>
+          <li>Hybrid</li>
+        </ul>
+      </section>
+      <hr>
+
+      <section class="main-section" id="Resources_and_More">
+        <header>
+          <h1>Resources and More</h1>
+        </header>
+        <p>All the information is taken from different sources, these are-</p>
+        <ul>
+          <li><a href="https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html">Oracle</a></li>
+          <li><a href="https://www.geeksforgeeks.org/java/">GeeksforGeeks</a></li>
+          <li><a href="https://www.javatpoint.com/java-tutorial">Javatpoint</a></li>
+        </ul>
+        <p id="end_sentence">
+          Java is very vast and their is so much more to learn.
+          So learn,try and experiment with java to expand your domain of knowledge in java.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
